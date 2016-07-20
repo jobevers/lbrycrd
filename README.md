@@ -10,6 +10,21 @@ LBRYcrd is a fork of bitcoin core designed for use in the LBRY network.
 
 LBRYcrd uses a blockchain similar to bitcoin's to implement a unique naming system in which the person who dedicates the largest amount of LBC to a name has control over that name.
 
+Building the Windows Qt (on linux)
+----------------------------------
+
+First install the toolchains:
+
+sudo apt-get install g++-mingw-w64-i686 mingw-w64-i686-dev g++-mingw-w64-x86-64 mingw-w64-x86-64-dev
+
+To build executables for Windows:
+
+cd depends
+make HOST=i686-w64-mingw32 -j4
+cd ..
+./configure --prefix=`pwd`/depends/i686-w64-mingw32
+make
+
 What is Bitcoin?
 ----------------
 
