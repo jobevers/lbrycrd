@@ -17,11 +17,14 @@ First install the toolchains:
 ```
 sudo apt-get install g++-mingw-w64-i686 mingw-w64-i686-dev g++-mingw-w64-x86-64 mingw-w64-x86-64-dev
 
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+
 To build executables for Windows:
 
 cd depends
 make HOST=i686-w64-mingw32 -j4
 cd ..
+./autogen.sh
 ./configure --prefix=`pwd`/depends/i686-w64-mingw32
 make
 ```
