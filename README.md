@@ -14,7 +14,7 @@ Building the Windows Qt (on linux)
 ----------------------------------
 
 First install the toolchains:
-'''
+```
 sudo apt-get install g++-mingw-w64-i686 mingw-w64-i686-dev g++-mingw-w64-x86-64 mingw-w64-x86-64-dev
 
 To build executables for Windows:
@@ -24,7 +24,7 @@ make HOST=i686-w64-mingw32 -j4
 cd ..
 ./configure --prefix=`pwd`/depends/i686-w64-mingw32
 make
-'''
+```
 What is Bitcoin?
 ----------------
 
